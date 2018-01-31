@@ -1,4 +1,4 @@
----
+ ---
  - name: Install KVM
    yum:  pkg={{ item }} state=present   
    with_items:
@@ -32,7 +32,7 @@
  - name: Move minishift to /bin
    shell: mv /tmp/minishift-1.12.0-linux-amd64/minishift /bin
    
- - name: Change owner group mode
+ - name: Change owner group mode minishift
    file:
      path: /bin/minishift
      owner: root
@@ -47,7 +47,7 @@
  - name: Move docker-machine-driver-kvm to /bin
    shell: mv /tmp/docker-machine-driver-kvm /bin
    
- - name: Change owner group mode
+ - name: Change owner group mode docker-machine-driver-kvm
    file:
      path: /bin/docker-machine-driver-kvm
      owner: root
