@@ -38,3 +38,19 @@
      owner: root
      group: root
      mode: 0775
+
+ - name: Download docker-machine-driver-kvm
+   get_url:
+    url: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm
+    dest: /tmp
+    
+ - name: Move minishift to /bin
+   shell: mv /tmp/docker-machine-driver-kvm /bin
+   
+ - name: Change owner group mode
+   file:
+     path: /bin/docker-machine-driver-kvm
+     owner: root
+     group: root
+     mode: 0775
+
