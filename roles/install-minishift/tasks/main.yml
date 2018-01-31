@@ -18,3 +18,16 @@
 
  - name: Start KVM service
    systemd: state=started name=libvirtd
+
+ - name: Download minishift
+   get_url:
+    url: https://github.com/minishift/minishift/releases/download/v1.12.0/minishift-1.12.0-linux-amd64.tgz
+    dest: /tmp
+    
+ - name: Extract foo.tgz into /var/lib/foo
+   unarchive:
+    src: /tmp/minishift-1.12.0-linux-amd64.tgz
+    dest: /tmp
+    
+ - name: Move minishift to /bin
+   shell: mv /tmp/minishift /bin
