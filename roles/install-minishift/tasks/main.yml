@@ -23,6 +23,7 @@
    get_url:
     url: https://github.com/minishift/minishift/releases/download/v1.12.0/minishift-1.12.0-linux-amd64.tgz
     dest: /tmp
+     mode: 0022
     
  - name: Extract foo.tgz into /var/lib/foo
    unarchive:
