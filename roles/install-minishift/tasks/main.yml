@@ -44,7 +44,7 @@
     url: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm
     dest: /tmp
     
- - name: Move minishift to /bin
+ - name: Move docker-machine-driver-kvm to /bin
    shell: mv /tmp/docker-machine-driver-kvm /bin
    
  - name: Change owner group mode
@@ -54,3 +54,23 @@
      group: root
      mode: 0775
 
+ - name: Download Openshift client oc
+   get_url:
+    url: https://github.com/openshift/origin/releases/download/v3.6.0/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+    dest: /tmp
+    
+ - name: Extract Openshift client oc
+   unarchive:
+    src: /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+    dest: /tmp    
+    
+ - name: MoveOpenshift client oc to /bin
+   shell: mv /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit/oc /bin
+   
+ - name: Change owner group mode of Openshift client oc
+   file:
+     path: /bin/oc
+     owner: root
+     group: root
+     mode: 0775
+     
