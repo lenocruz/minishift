@@ -1,1 +1,2 @@
 ---
+param1: "start --cpus 4 --disk-size 100GB --memory 12GB"
