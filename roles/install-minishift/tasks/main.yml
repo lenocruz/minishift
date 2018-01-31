@@ -75,4 +75,4 @@
      mode: 0775
      
  - name: Run the minishift with arguments
- - script: /bin/minishift --some-arguments {{ param1 }}
+   script: /bin/minishift --some-arguments {{ param1 }}
