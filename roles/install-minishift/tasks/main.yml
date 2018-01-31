@@ -30,4 +30,4 @@
     dest: /tmp
     
  - name: Move minishift to /bin
-   shell: mv /tmp/minishift /bin
+   shell: mv /tmp/minishift-1.12.0-linux-amd64/minishift /bin
