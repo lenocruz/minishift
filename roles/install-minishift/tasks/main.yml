@@ -74,5 +74,5 @@
      group: root
      mode: 0775
      
- - name: Run the minishift with arguments from group_vars local
+ - name: Run the minishift with arguments
  - script: /bin/minishift --some-arguments {{ param1 }}
