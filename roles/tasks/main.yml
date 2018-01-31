@@ -1,0 +1,20 @@
+---
+ - name: Install KVM
+   yum:  pkg={{ item }} state=present   
+   with_items:
+     - qemu-kvm 
+     - qemu-img 
+     - virt-manager 
+     - libvirt 
+     - libvirt-python 
+     - libvirt-client 
+     - virt-install 
+     - virt-viewer 
+     - bridge-utils
+   when: ansible_os_family == "RedHat"
+   
+ - name: Enable KVM service
+   systemd: enabled=yes name=libvirtd
+   
+ - name: Start KVM service
+   systemd: state=started name=libvirtd
