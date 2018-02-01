@@ -51,7 +51,7 @@ $ yum clean all
  
 5. Clone this repository
 
- $ git clone https://github.com/tso-ansible/minishift.git
+ $ git clone https://github.com/itikabc/minishift.git
  
  $ cd minishift/
  
