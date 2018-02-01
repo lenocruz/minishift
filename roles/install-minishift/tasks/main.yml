@@ -32,7 +32,7 @@
  - name: Move minishift to /bin
    shell: mv /tmp/minishift-1.12.0-linux-amd64/minishift /bin
    
- - name: Change owner group mode minishift
+ - name: Change owner group mode of minishift
    file:
      path: /bin/minishift
      owner: root
@@ -47,7 +47,7 @@
  - name: Move docker-machine-driver-kvm to /bin
    shell: mv /tmp/docker-machine-driver-kvm /bin
    
- - name: Change owner group mode docker-machine-driver-kvm
+ - name: Change owner group mode of docker-machine-driver-kvm
    file:
      path: /bin/docker-machine-driver-kvm
      owner: root
@@ -64,7 +64,7 @@
     src: /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
     dest: /tmp    
     
- - name: MoveOpenshift client oc to /bin
+ - name: Move Openshift client oc to /bin
    shell: mv /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit/oc /bin
    
  - name: Change owner group mode of Openshift client oc
@@ -74,5 +74,7 @@
      group: root
      mode: 0775
      
- - name: Run the minishift with arguments
-   script: /bin/minishift --some-arguments {{ param1 }}
+ - name: Run the minishift with arguments from all
+   command: /bin/minishift {{ param1 }}
+   
+ - debug: msg="Please login by typing 'oc login' on the shell using user=developer and password=any"   
