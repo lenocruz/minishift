@@ -14,11 +14,11 @@ Do these after the vm had been provisioned and it should be executed to itself, 
 
 ```
 curl https://raw.githubusercontent.com/itikabc/master/script1.sh | /bin/bash
+```
 
 This will reboot, please login again as root, the installation will run on the background, 
 check for file existence /tmp/minishiftisdone if it is done, 
 you may check the process by "ps -ef | grep script2.sh" if it still running on the background.
-```
  
 Run from shell "oc login" and it should show the URL and then you could go to your centos7 firefox and login on it.
 
