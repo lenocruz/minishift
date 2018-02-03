@@ -1,0 +1,11 @@
+[Unit]
+Description=This is needed only once
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/script2.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
