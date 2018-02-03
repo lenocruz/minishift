@@ -15,7 +15,8 @@ Do these after the vm had been provisioned and it should be executed to itself, 
 ```
 curl https://raw.githubusercontent.com/itikabc/master/script1.sh | /bin/bash
 
-This needs reboot, please login again as root, check for file existence /tmp/minishiftisdone if it is done installing, 
+This will reboot, please login again as root, the installation will run on the background, 
+check for file existence /tmp/minishiftisdone if it is done, 
 you may check the process by "ps -ef | grep script2.sh".
 ```
  
