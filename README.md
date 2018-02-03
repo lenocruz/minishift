@@ -13,7 +13,7 @@ The resources arguments for vcpu/ram/disk can be change on group_vars/all, pleas
 Do these after the vm had been provisioned and it should be executed to itself, login/su/sudo to root.
 
 ```
-curl https://raw.githubusercontent.com/venerari/itikabc/master/script1.sh | /bin/bash
+curl https://raw.githubusercontent.com/itikabc/master/script1.sh | /bin/bash
 
 This needs reboot, please login again as root, check for file existence /tmp/minishiftisdone if it is done installing, 
 you may check the process by "ps -ef | grep script2.sh".
