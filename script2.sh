@@ -20,6 +20,8 @@ touch /tmp/minishiftisdone
 
 systemctl stop script2.service
 systemctl disable script2.service
-rm -f /etc/systemd/system/script2.service
+
 systemctl daemon-reload
 systemctl reset-failed
+
+rm -f /etc/systemd/system/script2.service
