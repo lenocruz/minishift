@@ -75,6 +75,4 @@
      mode: 0775
      
  - name: Run the minishift with arguments from all
-   command: /bin/minishift {{ param1 }}
-   
- - debug: msg="Please login by typing 'oc login' on the shell using user=developer and password=any"   
+   command: /bin/minishift {{ param1 }} 
