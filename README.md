@@ -10,7 +10,7 @@ The resources arguments for vcpu/ram/disk can be change on group_vars/all, pleas
 
 ***You can't proceed if your vm or physical computer is not capable of virtualization, check it by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.***
 
-Do these after the vm had been provisioned and it should be executed to itself, login/su/sudo to root.
+Do this after the vm had been provisioned and it should be executed to itself, login/su/sudo to root.
 
 ```
 curl https://raw.githubusercontent.com/itikabc/minishift/master/script1.sh | /bin/bash
