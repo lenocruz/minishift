@@ -1,10 +1,10 @@
 #!/bin/bash
 
-curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/tso-ansible/ansible-tower/master/centos.repo
+curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/itikabc/minishift/master/centos.repo
 
-curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/venerari/minishift/master/script2.service
+curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/itikabc/minishift/master/script2.service
 
-curl -o  /root/script2.sh https://raw.githubusercontent.com/venerari/minishift/master/script2.sh
+curl -o  /root/script2.sh https://raw.githubusercontent.com/itikabc/minishift/master/script2.sh
 
 chmod +x /root/script2.sh
 
