@@ -13,7 +13,7 @@ The resources arguments for vcpu/ram/disk can be change on group_vars/all, pleas
 Do these after the vm had been provisioned and it should be executed to itself, login/su/sudo to root.
 
 ```
-curl https://raw.githubusercontent.com/itikabc/master/script1.sh | /bin/bash
+curl https://raw.githubusercontent.com/itikabc/minishift/master/script1.sh | /bin/bash
 ```
 
 This will reboot, please login again as root, the installation will run on the background, 
