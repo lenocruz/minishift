@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/itikabc/minishift/master/centos.repo
+sh -c 'echo -e "[centos]\nname=CentOS $releasever - $basearch\nbaseurl=http://mirror.centos.org/centos/7/os/\$basearch/\nenabled=1\ngpgcheck=1\ngpgkey=http://mirror.centos.org/centos/7/os/\$basearch/RPM-GPG-KEY-CentOS-7" > /etc/yum.repos.d/centos.repo'
 
 curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/itikabc/minishift/master/script2.service
 
