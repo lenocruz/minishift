@@ -1,4 +1,4 @@
-**# Minishift Installation with one command after the VM-centos7/physical had been freshly provisioned.
+# Minishift Installation with one command after the VM-centos7/physical had been freshly provisioned.
 
 Tested on Vmware Workstation v12 (check the 3 virtualization engines when creating the vm) and Centos7-physical.  I run minishift with 4 vcpu, 12GB ram and 100GB disk.  I added the kickstart.cfg file.
 
